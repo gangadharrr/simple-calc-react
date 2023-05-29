@@ -27,14 +27,37 @@ function App() {
   const div=()=>
   {
     alert(parseInt(firstInput)/parseInt(secondInput))
+  } 
+  const BackSpace=()=>
+  {
+    if(focusItem==='first-input')
+    {
+      setFirst(String(firstInput).slice(0, firstInput.length-2))
+      if(firstInput=='')
+      {
+        setFirst('0');
+      }
+    }
+    else{
+      setSecond(String(secondInput).slice(0, secondInput.length-2));
+      if(secondInput=='')
+      {
+        setSecond('0');
+      }
+    }
   }
-
   const setValue=(num)=>
   { 
     if(focusItem==='first-input')
     {setFirst(firstInput=='0'?num:firstInput+num)}
     else
     setSecond(secondInput=='0'?num:secondInput+num);
+  }
+  const AllClear=()=>
+  {
+    setFirst('0');
+    setSecond('0');
+
   }
   return (
     <div className="App">
@@ -59,9 +82,9 @@ function App() {
           <CircleButton onClick={()=>{setValue(8)}} text='8'/>
           <CircleButton onClick={()=>{setValue(9)}} text='9'/>
           <CircleButton onClick={()=>{mul()}} bgcolor='blue'text='x'/>
-          <CircleButton onClick={()=>{setValue('.')}} text='.'/>
+          <CircleButton onClick={()=>{AllClear()}} text='C'/>
           <CircleButton onClick={()=>{setValue(0)}} text='0'/>
-          <CircleButton onClick={()=>{setValue('00')}} text='00'/>
+          <CircleButton onClick={()=>{BackSpace('⌫')}} text='00'/>
           <CircleButton onClick={()=>{div()}} bgcolor='blue' text='/'/>
         </div>
       </div>
