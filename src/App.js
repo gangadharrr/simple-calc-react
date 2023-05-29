@@ -14,44 +14,38 @@ function App() {
   }
   const add=()=>
   {
-    alert(parseInt(firstInput)+parseInt(secondInput))
+    alert("Output : "+(parseInt(firstInput)+parseInt(secondInput)))
   }
   const sub=()=>
   {
-    alert(parseInt(firstInput)-parseInt(secondInput))
+    alert("Output : "+(parseInt(firstInput)-parseInt(secondInput)))
   }
   const mul=()=>
   {
-    alert(parseInt(firstInput)*parseInt(secondInput))
+    alert("Output : "+(parseInt(firstInput)*parseInt(secondInput)))
   }
   const div=()=>
   {
-    alert(parseInt(firstInput)/parseInt(secondInput))
+    alert("Output : "+(parseInt(firstInput)/parseInt(secondInput)))
   } 
   const BackSpace=()=>
   {
     if(focusItem==='first-input')
     {
-      setFirst(String(firstInput).slice(0, firstInput.length-2))
-      if(firstInput=='')
-      {
-        setFirst('0');
-      }
+      setFirst(firstInput.length==1?'0':String(firstInput).slice(0, firstInput.length-1))
+
     }
     else{
-      setSecond(String(secondInput).slice(0, secondInput.length-2));
-      if(secondInput=='')
-      {
-        setSecond('0');
-      }
+      setSecond(secondInput.length==1?'0':String(secondInput).slice(0, secondInput.length-1));
+  
     }
   }
   const setValue=(num)=>
   { 
     if(focusItem==='first-input')
-    {setFirst(firstInput=='0'?num:firstInput+num)}
+    {setFirst(firstInput=='0'?String(num):firstInput+''+num)}
     else
-    setSecond(secondInput=='0'?num:secondInput+num);
+    setSecond(secondInput=='0'?num:secondInput+''+num);
   }
   const AllClear=()=>
   {
@@ -84,7 +78,7 @@ function App() {
           <CircleButton onClick={()=>{mul()}} bgcolor='blue'text='x'/>
           <CircleButton onClick={()=>{AllClear()}} text='C'/>
           <CircleButton onClick={()=>{setValue(0)}} text='0'/>
-          <CircleButton onClick={()=>{BackSpace('⌫')}} text='00'/>
+          <CircleButton onClick={()=>{BackSpace()}} text='⌫'/>
           <CircleButton onClick={()=>{div()}} bgcolor='blue' text='/'/>
         </div>
       </div>
