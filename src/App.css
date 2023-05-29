@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  background-color: #282c34;
+  height: 450px;
+  width: 25%;
+  row-gap: 5%;
+  margin: 0%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 100px 10px  #387aff;
+  border: 5px solid#fff ;
+}
+.container h2{
+  line-height: 0%;
+}
+
+.buttons{
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+    column-gap: 5%;
+    row-gap: 5%;
+}
+.CircleButton
+{
+  background-color: #0055ff;
+  height: 50px;
+  width:50px;
+  font-size: xx-large;
+  border: 2px solid #387aff;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+}
+.CircleButton:hover
+{
+
+  filter: invert(100%);
+}
+.white
+{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.blue
+{
+  background-color: #0055ff;
+  color: white;
+}
+.inputs
+{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+}
+.CustomNumInp
+{
+  height: 30px;
+  width: 110px;
+  font-size: xx-large;
+  border:3px solid #387aff;
+  text-align: right;
+  overflow-x: visible;
+}
+.CustomNumInp:focus
+{
+  background-color: #6799ff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
