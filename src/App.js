@@ -32,20 +32,20 @@ function App() {
   {
     if(focusItem==='first-input')
     {
-      setFirst(String(firstInput).length==1?'0':String(firstInput).slice(0, firstInput.length-1))
+      setFirst(String(firstInput).length===1?'0':String(firstInput).slice(0, firstInput.length-1))
 
     }
     else{
-      setSecond(String(secondInput).length==1?'0':String(secondInput).slice(0, secondInput.length-1));
+      setSecond(String(secondInput).length===1?'0':String(secondInput).slice(0, secondInput.length-1));
   
     }
   }
   const setValue=(num)=>
   { 
     if(focusItem==='first-input')
-    {setFirst(firstInput=='0'?String(num):firstInput+''+num)}
+    {setFirst(firstInput==='0'?String(num):firstInput+''+num)}
     else
-    setSecond(secondInput=='0'?num:secondInput+''+num);
+    setSecond(secondInput==='0'?num:secondInput+''+num);
   }
   const AllClear=()=>
   {
