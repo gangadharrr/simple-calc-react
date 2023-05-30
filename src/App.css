@@ -1,10 +1,14 @@
+body{
+  background-image: url("../src/images/background.jpg");
+    background-position: center;
+    background-size:contain;
+
+}
 .App {
   text-align: center;
   display: flex;
   flex-direction: row;
-
   justify-content: center;
-
   margin-top:70px ;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -65,8 +69,10 @@
   box-shadow: 0px 0px 100px 10px  #387aff;
   border: 5px solid#fff ;
 }
-.container h2{
+.container h1{
   line-height: 0%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0055ff;
 }
 
 .buttons{

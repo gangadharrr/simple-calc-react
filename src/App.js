@@ -32,11 +32,11 @@ function App() {
   {
     if(focusItem==='first-input')
     {
-      setFirst(firstInput.length==1?'0':String(firstInput).slice(0, firstInput.length-1))
+      setFirst(String(firstInput).length==1?'0':String(firstInput).slice(0, firstInput.length-1))
 
     }
     else{
-      setSecond(secondInput.length==1?'0':String(secondInput).slice(0, secondInput.length-1));
+      setSecond(String(secondInput).length==1?'0':String(secondInput).slice(0, secondInput.length-1));
   
     }
   }
@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className='headings'>
-          <h2>Calculator</h2>
+          <h1>Calculator</h1>
         </div>
         <div className='inputs'>
           <CustomNumInp onClick={()=>{getFocusedItem('first-input')}} value={firstInput} id="first-input"/>
