@@ -74,6 +74,8 @@ body{
   line-height: 0%;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0055ff;
+  text-shadow: 2px 2px 100px #0055ff ;
+  /* text-shadow: 10px 10px 70px black inset; */
 }
 
 .buttons{
