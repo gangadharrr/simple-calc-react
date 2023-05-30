@@ -66,8 +66,9 @@ body{
   row-gap: 5%;
   margin: 0%;
   border-radius: 25px;
-  box-shadow: 0px 0px 100px 10px  #387aff;
+  box-shadow: 0px 0px 100px 10px  #387aff,0px 0px 70px 1px black inset;
   border: 5px solid#fff ;
+
 }
 .container h1{
   line-height: 0%;
